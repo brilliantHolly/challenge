@@ -1,0 +1,71 @@
+#gl-canvas {
+    display: block;
+    border: 1px solid black;
+    position: absolute;
+    left:180px;
+    top:10px;
+
+}
+
+#pre-gl-canvas {
+    display: block;
+    border: 1px solid black;
+    position: absolute;
+    left:690px;
+    top:100px;
+
+}
+
+#playbutton {
+    width: 100px;
+    height: 36px;
+    display: block;
+    position: absolute;
+    left: 700px;
+    top: 320px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(13, 108, 252, 0.37);
+    cursor: pointer;
+}
+
+#info {
+    position: absolute;
+    left: 700px;
+    top: 400px;
+    width: 100px;
+    font-size: larger;
+    margin-top: 5px;
+    text-align: center;
+    color: coral;
+}
+
+#instruction1{
+    position: absolute;
+    left: 0px;
+    top: 68px;
+    width:100px;
+    font-size: 20px;
+}
+#instruction2{
+    position: absolute;
+    left: -80px;
+    top: 120px;
+    width:100px;
+    font-size: 20px;
+}
+#instruction3{
+    position: absolute;
+    left: 80px;
+    top: 120px;
+    width:100px;
+    font-size: 20px;
+}
+#instruction4{
+    position: absolute;
+    left: 0px;
+    top: 120px;
+    width:100px;
+    font-size: 20px;
+}

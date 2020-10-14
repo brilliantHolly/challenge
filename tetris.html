@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+        <title>tetrisChallenge</title>
+        <link href="tetris.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="./Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="./Common/initShaders.js"></script>
+        <script type="text/javascript" src="./Common/MV.js"></script>
+        <script type="text/javascript" src="tetris.js"></script>
+
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            precision highp float;
+            attribute vec4 vPosition;
+            attribute vec4 vColor;
+            varying vec4 fColor;
+
+            void main()
+            {
+                fColor = vColor;
+                gl_Position = vPosition;
+            }
+        </script>
+
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            precision highp float;
+            varying vec4 fColor;
+
+            void main()
+            {
+                gl_FragColor = fColor;
+            }
+        </script>
+        
+        <script id="pre-vertex-shader" type="x-shader/x-vertex">
+            precision highp float;
+            attribute vec4 pre_vPosition;
+            attribute vec4 pre_vColor;
+            varying vec4 pre_fColor;
+
+            void main()
+            {
+                pre_fColor = pre_vColor;
+                gl_Position = pre_vPosition;
+            }
+        </script>
+
+        <script id="pre-fragment-shader" type="x-shader/x-fragment">
+            precision highp float;
+            varying vec4 pre_fColor;
+
+            void main()
+            {
+                gl_FragColor = pre_fColor;
+            }
+        </script>
+    </head>   
+
+    <body>
+        <canvas id="gl-canvas" width="420" height="720">
+        Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+        <canvas id="pre-gl-canvas" width="120" height="120">
+        Oops ... your browser doesn't support the HTML5 canvas element
+        </canvas>
+        <button id="playbutton" onclick="playButtonClicked();">开始游戏</button>
+        <div id="info">
+            分数：<span id="score">0</span>
+            <div id="instruction1"> ↑:旋转 </div>
+            <div id="instruction2"> ←:左移 </div>
+            <div id="instruction3"> →:右移 </div>
+            <div id="instruction4"> ↓:下移 </div>
+        </div>
+    </body>
+</html>
